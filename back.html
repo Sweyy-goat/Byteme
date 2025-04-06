@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sidharth | Portfolio</title>
+  <meta name="description" content="Personal portfolio of Sidharth showcasing interests and creativity." />
+  <link rel="icon" href="https://res.cloudinary.com/dez7k4cb1/image/upload/v1743403883/sidhnew_dew616.jpg" />
+
+  <!-- Google Fonts: Elegant Script Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&display=swap" rel="stylesheet" />
+
+  <!-- AOS Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .img {
+      background: linear-gradient(
+          rgba(0, 0, 0, 0.6),
+          rgba(0, 0, 0, 0.6)
+        ),
+        url('https://res.cloudinary.com/dez7k4cb1/image/upload/v1743403883/sidhnew_dew616.jpg') no-repeat center center/cover;
+      height: 100vh;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 10;
+    }
+
+    nav .title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+    }
+
+    nav .links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav .links a:hover {
+      color: #00f7ff;
+    }
+
+    h1 {
+      font-size: 4rem;
+      letter-spacing: 5px;
+      animation: fadeIn 2s ease-out;
+    }
+
+    .intro {
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.7rem;
+      max-width: 800px;
+      line-height: 1.8;
+      margin-top: 20px;
+      color: #fceff9;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+    }
+
+    .button-container {
+      display: flex;
+      gap: 30px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .button, .butt {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 2px solid white;
+      border-radius: 20px;
+      width: 170px;
+      height: 180px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(5px);
+    }
+
+    .button:hover, .butt:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+      transform: translateY(-5px);
+    }
+
+    .button img, .butt img {
+      width: 130px;
+      height: 130px;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+        text-align: center;
+      }
+
+      nav .links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="title">My Portfolio</div>
+    <div class="links">
+      <a href="https://www.instagram.com/_sidh6th._/?hl=en" aria-label="Instagram profile">Instagram</a>
+      <a href="https://github.com/Sweyy-goat/inventory" aria-label="GitHub repository">GitHub</a>
+    </div>
+  </nav>
+
+  <div class="img">
+    <h1 data-aos="fade-up">SIDHARTH</h1>
+
+    <!-- Poetic Introduction -->
+    <p class="intro" data-aos="fade-up" data-aos-delay="150">
+      A seeker of stories written in code and colors,<br />
+      I wander through lines and pixels with wonder in my eyes.<br />
+      I am not just what I build—but what I dream, shape, and breathe into life.<br />
+      Welcome to a canvas of curiosity, where every click reveals a little piece of me.
+    </p>
+
+    <div class="button-container">
+      <a href="intrest.html" class="button" data-aos="zoom-in" data-aos-delay="200" aria-label="Go to Interest Page">
+        <img src="https://res.cloudinary.com/dez7k4cb1/image/upload/v1743323732/in_tzj0gd.png" alt="Interest Icon" />
+      </a>
+
+      <a href="ne.html" class="butt" data-aos="zoom-in" data-aos-delay="400" aria-label="Go to Cartoon Page">
+        <img src="https://res.cloudinary.com/dez7k4cb1/image/upload/v1743336890/cartoon-characters-png-44249_dznfzy.png" alt="Cartoon Icon" />
+      </a>
+    </div>
+  </div>
+
+  <footer style="background: rgba(0, 0, 0, 0.85); color: white; text-align: center; padding: 30px 20px; font-family: 'Segoe UI', sans-serif;">
+    <h2 style="font-size: 1.8rem; margin-bottom: 10px;"> Contact Me</h2>
+    <p style="font-size: 1rem; margin-bottom: 6px;"> Email: <a href="mailto:sidharthsunil1305@gmail.com" style="color: #00f7ff; text-decoration: none;">sidharthsunil1305@gmail.com</a></p>
+    <p style="font-size: 1rem;"> Phone: <a href="tel:9633890173" style="color: #00f7ff; text-decoration: none;">9633890173</a></p>
+  </footer>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
