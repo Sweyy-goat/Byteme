@@ -1,174 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Academic Chronicles</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Academic Chronicles</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+      scroll-behavior: smooth;
+    }
 
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
+    .t {
+      text-align: center;
+      padding: 20px 0;
+    }
 
-        .t {
-            text-align: center;
-            padding: 20px 0;
-        }
+    a {
+      color: darksalmon;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+      margin: 0 10px;
+    }
 
-        a {
-            color: darksalmon;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 18px;
-        }
+    .project-button {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: darksalmon;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
 
-        .tt {
-            font-family: 'Courier New', Courier, monospace;
-            text-align: center;
-            letter-spacing: 5px;
-            font-size: larger;
-        }
+    .project-button:hover {
+      background-color: #e18a6a;
+    }
 
-        .a {
-            background-image: url(https://res.cloudinary.com/dez7k4cb1/image/upload/v1743758312/ad_bjpelm.png);
-            background-size: cover;
-            background-position: center;
-            height: 40vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin: 20px;
-            border-radius: 15px;
-        }
+    .tt {
+      font-family: 'Courier New', Courier, monospace;
+      text-align: center;
+      letter-spacing: 5px;
+      font-size: larger;
+    }
 
-        .a h1 {
-            font-family: Arial, Helvetica, sans-serif;
-            font-style: italic;
-            color: rgba(255, 255, 255, 0.9);
-            text-align: center;
-            font-size: 4vw;
-        }
+    .a {
+      background-image: url(https://res.cloudinary.com/dez7k4cb1/image/upload/v1743758312/ad_bjpelm.png);
+      background-size: cover;
+      background-position: center;
+      height: 40vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px;
+      border-radius: 15px;
+    }
 
-        .b {
-            margin: 40px 20px;
-        }
+    .a h1 {
+      font-family: Arial, Helvetica, sans-serif;
+      font-style: italic;
+      color: rgba(255, 255, 255, 0.9);
+      text-align: center;
+      font-size: 4vw;
+    }
 
-        .b p {
-            text-align: center;
-            font-family: 'Courier New', Courier, monospace;
-            font-size: larger;
-            letter-spacing: 4px;
-            margin-bottom: 20px;
-        }
+    .b {
+      margin: 40px 20px;
+    }
 
-        .b img {
-            width: 100%;
-            max-width: 1200px;
-            height: auto;
-            display: block;
-            margin: 0 auto;
-            border-radius: 10px;
-        }
+    .b p {
+      text-align: center;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: larger;
+      letter-spacing: 4px;
+      margin-bottom: 20px;
+    }
 
-        .evolution {
-            margin: 60px 20px;
-            background-color: #fdf6f0;
-            padding: 40px;
-            border-radius: 20px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        }
+    .b img {
+      width: 100%;
+      max-width: 1200px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      border-radius: 10px;
+    }
 
-        .evolution h2 {
-            font-family: 'Courier New', Courier, monospace;
-            font-size: 26px;
-            letter-spacing: 3px;
-            color: darksalmon;
-            text-align: center;
-            margin-bottom: 20px;
-        }
+    .evolution {
+      margin: 60px 20px;
+      background-color: #fdf6f0;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
 
-        .evolution p {
-            font-family: 'Arial', sans-serif;
-            font-size: 16px;
-            line-height: 1.8;
-            color: #333;
-            margin-top: 20px;
-            text-align: justify;
-        }
+    .evolution h2 {
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 26px;
+      letter-spacing: 3px;
+      color: darksalmon;
+      text-align: center;
+      margin-bottom: 20px;
+    }
 
-        @media screen and (max-width: 768px) {
-            .a h1 {
-                font-size: 6vw;
-            }
+    .evolution p {
+      font-family: 'Arial', sans-serif;
+      font-size: 16px;
+      line-height: 1.8;
+      color: #333;
+      margin-top: 20px;
+      text-align: justify;
+    }
 
-            .tt {
-                font-size: 16px;
-                letter-spacing: 3px;
-            }
+    .projects-section {
+      background: #f4f4f4;
+      padding: 50px 20px;
+      margin-top: 60px;
+      border-top: 2px solid #ddd;
+    }
 
-            .evolution {
-                padding: 20px;
-            }
+    .projects-section h2 {
+      text-align: center;
+      color: darksalmon;
+      font-family: 'Courier New', Courier, monospace;
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
 
-            .evolution p {
-                font-size: 15px;
-            }
+    .projects-section ul {
+      max-width: 800px;
+      margin: auto;
+      list-style: none;
+      padding: 0;
+    }
 
-            .b p {
-                font-size: 16px;
-                letter-spacing: 2px;
-            }
-        }
-    </style>
+    .projects-section li {
+      padding: 10px;
+      background: #fff;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      font-size: 16px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .a h1 {
+        font-size: 6vw;
+      }
+
+      .tt {
+        font-size: 16px;
+        letter-spacing: 3px;
+      }
+
+      .evolution {
+        padding: 20px;
+      }
+
+      .evolution p {
+        font-size: 15px;
+      }
+
+      .b p {
+        font-size: 16px;
+        letter-spacing: 2px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <div class="t" data-aos="fade-down" data-aos-duration="1000">
-        <a href="back.html">Home</a>
-    </div>
+  <div class="t" data-aos="fade-down" data-aos-duration="1000">
+    <a href="back.html">Home</a>
+    <a href="#projects" class="project-button">View Projects</a>
+  </div>
 
-    <p class="tt" data-aos="fade-up" data-aos-duration="1000">SIDHARTH SUNIL</p>
+  <p class="tt" data-aos="fade-up" data-aos-duration="1000">SIDHARTH SUNIL</p>
 
-    <div class="a" data-aos="zoom-in" data-aos-duration="1500">
-        <h1>Academic Chronicles</h1>
-    </div>
+  <div class="a" data-aos="zoom-in" data-aos-duration="1500">
+    <h1>Academic Chronicles</h1>
+  </div>
 
-    <div class="b" data-aos="fade-up" data-aos-duration="1200">
-        <p>Years in Review: My Evolving Skillset</p>
-        <img src="https://res.cloudinary.com/dez7k4cb1/image/upload/v1743849235/Screenshot_2025-04-05_160143_lyyd7u.png" alt="Academic Journey">
-    </div>
+  <div class="b" data-aos="fade-up" data-aos-duration="1200">
+    <p>Years in Review: My Evolving Skillset</p>
+    <img src="https://res.cloudinary.com/dez7k4cb1/image/upload/v1743849235/Screenshot_2025-04-05_160143_lyyd7u.png" alt="Academic Journey">
+  </div>
 
-    <div class="evolution" data-aos="fade-up" data-aos-duration="1400">
-        <h2>EVOLUTION</h2>
-        <p>
-            From grasping basic coding concepts to building full-fledged websites, my skills have grown steadily each year.
-            I began with HTML and CSS, exploring the foundations of web design. Then came Python and C, where I learned logic,
-            problem-solving, and programming structure. Now, I’m diving deeper into JavaScript, GitHub workflows, and interactive
-            UI design. Each tool, each challenge, and each success has shaped me into a more confident and capable developer.
-        </p>
-        <p>
-            My evolution didn’t stop with syntax and code—I've learned to debug smarter, collaborate through version control,
-            and think like a real-world problem solver. Group projects and online communities helped me understand the value of
-            teamwork and feedback. I’ve started experimenting with responsive design, animations, and performance optimization to
-            create smooth, user-friendly experiences.
-        </p>
-        <p>
-            With every passing semester, my curiosity has only grown stronger. I’m constantly learning, adapting, and evolving—aiming
-            to not just build websites, but experiences. This journey is far from over, but every step has built a stronger,
-            sharper version of me as a tech enthusiast and future innovator.
-        </p>
-    </div>
+  <div class="evolution" data-aos="fade-up" data-aos-duration="1400">
+    <h2>EVOLUTION</h2>
+    <p>
+      From grasping basic coding concepts to building full-fledged websites, my skills have grown steadily each year...
+    
+    
+      My evolution didn’t stop with syntax and code—I've learned to debug smarter, collaborate through version control...
 
-    <!-- AOS Script -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+
+      With every passing semester, my curiosity has only grown stronger. I’m constantly learning, adapting, and evolving...
+    </p>
+  </div>
+
+  <div id="projects" class="projects-section" data-aos="fade-up" data-aos-duration="1400">
+    <h2>My Projects</h2>
+    <ul>
+      <li>🎨 Portfolio Website using HTML, CSS, JS</li>
+      <li>🧠 AI-powered Recipe Recommender</li>
+      <li>📊 Java-based Student Record System</li>
+      <li>📱 Mobile UI design prototype with Figma</li>
+    </ul>
+  </div>
+
+ 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 
 </body>
 </html>
